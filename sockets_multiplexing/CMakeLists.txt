@@ -1,0 +1,11 @@
+project(Sockets_Multiplexing)
+
+add_executable(tcp_server tcp_server/error.h tcp_server/server.c tcp_server/client.c)
+add_executable(select echo_server_select.cpp)
+add_executable(poll echo_server_poll.cpp)
+add_executable(epoll echo_server_epoll.cpp)
+add_executable(kqueue echo_server_kqueue.cpp)
+add_executable(kqueue_single echo_server_kqueue_single_socket.cpp)
+add_executable(chat chat.cpp)
+add_executable(showip showip.c)
+add_executable(sockaddr sockaddr.c)
