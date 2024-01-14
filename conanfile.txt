@@ -1,0 +1,8 @@
+[requires]
+boost/1.83.0
+libuv/1.47.0
+libevent/2.1.12
+libev/4.33
+
+[generators]
+cmake
