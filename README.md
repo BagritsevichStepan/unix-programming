@@ -46,13 +46,19 @@ The solutions are in the folder `sockets_multiplexing`.
 
 ## <a name="ipc"></a>Unix IPC
 ### <a name="fork"></a>Unix Processes. Channels. Signals
-1. todo
-2. todo
+1. The user enters several bash commands into the command line. For example:
+   
+   `who | sort | uniq -c | sort -nk1`
+   
+   We need to read the data from `STDINT` and output result to `STDOUT`. Each command must be executed in separate unix process. To transfer data between processes, use `pipe`
+3. Implement inter-process communication using `pipe`, named pipe `fifo channel` and `socketpair`
+4. Implement unkillable proccess. The process must ignore the signals `SIGTERM` and `SIGINT`
+5. Create child process that waits for and processes the `SIGTERM` signal from the parent process
 
 The solutions are in the folder `processes_channels_signals`.
 
 ### <a name="msg"></a>Unix Message Queues. Semaphores
-1. todo
-2. todo
+1. Implement process communication using unix message queues. Сreate two solutions: one with POSIX `mq_open`, the second with SysV `msgget` message queue
+2. Implement process synchronization using unix semaphores. Сreate two solutions: one with POSIX `sem_open`, the second with SysV `semget` semaphore
 
 The solutions are in the folder `unix_ipc`.
